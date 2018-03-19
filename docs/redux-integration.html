@@ -21,7 +21,7 @@
 </code></pre>
 <p>With Redux, your app's state is defined by a reducer. Each navigation router effectively has a reducer, called <code>getStateForAction</code>. The following is a minimal example of how you might use navigators within a Redux application:</p>
 <pre><code class="language-jsx es6"><span class="token keyword">import</span> <span class="token punctuation">{</span>
-  StackNavigator<span class="token punctuation">,</span>
+  createStackNavigator<span class="token punctuation">,</span>
   addNavigationHelpers<span class="token punctuation">,</span>
 <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-navigation'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span>
@@ -36,7 +36,7 @@
 <span class="token keyword">import</span> <span class="token punctuation">{</span> Provider<span class="token punctuation">,</span> connect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-redux'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 
-<span class="token keyword">const</span> AppNavigator <span class="token operator">=</span> <span class="token function">StackNavigator</span><span class="token punctuation">(</span>AppRouteConfigs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> AppNavigator <span class="token operator">=</span> <span class="token function">createStackNavigator</span><span class="token punctuation">(</span>AppRouteConfigs<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> initialState <span class="token operator">=</span> AppNavigator<span class="token punctuation">.</span>router<span class="token punctuation">.</span><span class="token function">getStateForAction</span><span class="token punctuation">(</span>AppNavigator<span class="token punctuation">.</span>router<span class="token punctuation">.</span><span class="token function">getActionForPathAndParams</span><span class="token punctuation">(</span><span class="token string">'Login'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
